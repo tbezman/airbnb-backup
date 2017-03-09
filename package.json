@@ -1,0 +1,19 @@
+{
+  "name": "airbnb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "hummus": "^1.0.75",
+    "pdfkit": "^0.8.0",
+    "request": "^2.81.0",
+    "wkhtmltopdf": "^0.3.4"
+  }
+}
