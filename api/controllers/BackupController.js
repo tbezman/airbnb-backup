@@ -1,4 +1,5 @@
 let BackupService = require('../services/BackupService');
+let fs = require('fs');
 
 /**
  * BackupController
@@ -10,7 +11,11 @@ let BackupService = require('../services/BackupService');
 module.exports = {
     createBackup: function (req, res) {
         BackupService.createPDF(req.param('room'), req.param('host')).then(backup => {
-            res.ok(backup);
+            res.attachment(backup);
+
+            fs.createReadStream(backup).pipe(res);
+
+            fs.unlink(backup);
         });
     }
 }
